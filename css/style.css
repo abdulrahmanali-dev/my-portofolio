@@ -27,7 +27,7 @@ h5 {
 }
 
 .btn {
-  border: solid var(--clr-primary);
+  border: solid var(--clr-primary) 2px;
 }
 
 a {
