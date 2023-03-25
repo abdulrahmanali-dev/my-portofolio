@@ -39,7 +39,49 @@ body {
 }
 
 .navbar {
-  background-color: var(--clr-bg-alt);
+  background-color: #f7f7f7;
+  transition: 0.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px !important;
+  }
+}
+.navbar .navbar-brand {
+  position: relative;
+}
+.navbar .navbar-brand::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 3px;
+  background-color: var(--clr-primary);
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.navbar .navbar-brand:hover:before {
+  transform: scaleX(1);
+}
+.navbar.sticky {
+  padding: 10px !important;
+  z-index: 9999;
+}
+.navbar.sticky .navbar-brand {
+  text-shadow: white 0px 1px 7px;
+  position: relative;
+}
+.navbar.sticky .navbar-brand:hover:before {
+  transform: scaleX(1);
 }
 .navbar .navbar-brand {
   font-weight: 800;
@@ -64,6 +106,25 @@ body {
   width: 130px;
   margin: auto;
   padding: 10px 0;
+  position: relative;
+}
+.navbar .navbar-nav li::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 3px;
+  background-color: var(--clr-primary);
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.navbar .navbar-nav li:hover:before {
+  transform: scaleX(1);
 }
 @media (min-width: 576px) {
   .navbar .navbar-nav li {
@@ -82,6 +143,9 @@ body {
   }
 }
 
+.hero {
+  min-height: 91vh;
+}
 .hero h1 {
   color: var(--clr-fg-alt);
   font-weight: 700;
@@ -131,7 +195,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   right: 0;
   z-index: -1;
   background: var(--gradient);
@@ -369,20 +433,20 @@ body {
   z-index: 1;
 }
 
-header {
+footer {
   padding: 20px 0;
   background-color: #eee;
 }
-header p {
+footer p {
   margin: 0;
   font-size: 14px;
 }
 @media (min-width: 576px) {
-  header p {
+  footer p {
     font-size: 17px;
   }
 }
-header p span {
+footer p span {
   color: var(--clr-primary);
   font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

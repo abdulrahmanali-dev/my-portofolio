@@ -38,13 +38,64 @@ a {
 }
 body {
   background-color: var(--clr-bg);
+  
 }
 .navbar {
-  background-color: var(--clr-bg-alt);
+  background-color: #f7f7f7;
+  transition: 0.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @media (max-width: 992px) {
+    padding: 10px !important;
+  }
+  .navbar-brand {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      height: 3px;
+      background-color: var(--clr-primary);
+      border: none;
+      transition: transform 0.3s ease-in-out;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+  }
+  &.sticky {
+    // background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px !important;
+    z-index: 9999;
+    .navbar-brand {
+      text-shadow: white 0px 1px 7px;
+      position: relative;
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+    // .navbar-nav {
+    //   .nav-link {
+    //     color: white !important;
+    //   }
+    // }
+  }
   .navbar-brand {
     font-weight: 800;
     color: var(--clr-primary);
-
     font-size: 24px;
     &:hover,
     &:focus {
@@ -54,7 +105,6 @@ body {
       font-size: 24px;
     }
   }
-
   .navbar-nav {
     color: var(--clr-fg-alt);
     text-align: center;
@@ -64,6 +114,28 @@ body {
       width: 130px;
       margin: auto;
       padding: 10px 0;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        height: 3px;
+        background-color: var(--clr-primary);
+        border: none;
+        transition: transform 0.3s ease-in-out;
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+
       @media (min-width: 576px) {
         padding: 0px;
         width: auto;
@@ -81,6 +153,7 @@ body {
 }
 
 .hero {
+  min-height: 91vh;
   h1 {
     color: var(--clr-fg-alt);
     font-weight: 700;
@@ -125,7 +198,7 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        bottom: 0;
+        bottom: -1px;
         right: 0;
         z-index: -1;
         background: var(--gradient);
@@ -188,7 +261,6 @@ body {
         }
       }
     }
-
     .btn {
       position: relative;
       &::before {
@@ -367,7 +439,7 @@ body {
   }
 }
 
-header {
+footer {
   padding: 20px 0;
   background-color: #eee;
 
