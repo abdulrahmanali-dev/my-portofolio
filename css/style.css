@@ -1,4 +1,8 @@
-
+.projects .project-card .card-text {
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
 :root {
   --clr-bg: #fcfcfc;
   --clr-bg-two: #ccc5b9;
@@ -6,11 +10,18 @@
   --clr-fg: #555;
   --clr-fg-two: #252422;
   --clr-fg-alt: #444;
-  --clr-primary: #eb5e28;
+  /*  */
+      --flame-orange: #eb5e28; /* Flame Orange */
+      --saffron-orange: #eba628; /* Saffron Orange */
+      --sunshine-yellow: #ebeb28; /* Sunshine Yellow */
+      --lime-green: #a6eb28; /* Lime Green */
+      --jade-green: #28eb5e; /* Jade Green */
+  /*  */
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --gradient: linear-gradient(45deg, #fe6716, #f13601);
 }
 
+ 
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +39,7 @@ h5 {
 }
 
 .btn {
-  border: solid var(--clr-primary) 2px;
+  border: solid var(--flame-orange) 2px;
 }
 
 a {
@@ -46,12 +57,12 @@ body {
 }
 /* START HEADER */
 .navbar {
-  background-color: #f7f7f7;
   transition: 0.5s;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: white;
 }
 @media (max-width: 992px) {
   .navbar {
@@ -70,7 +81,7 @@ body {
   right: 0;
   z-index: -1;
   height: 3px;
-  background-color: var(--clr-primary);
+  background-color: var(--flame-orange);
   border: none;
   transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
@@ -92,11 +103,11 @@ body {
 }
 .navbar .navbar-brand {
   font-weight: 800;
-  color: var(--clr-primary);
+  color: var(--flame-orange);
   font-size: 24px;
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
-  color: var(--clr-primary);
+  color: var(--flame-orange);
 }
 @media (min-width: 576px) {
   .navbar .navbar-brand {
@@ -124,7 +135,7 @@ body {
   right: 0;
   z-index: -1;
   height: 3px;
-  background-color: var(--clr-primary);
+  background-color: var(--flame-orange);
   border: none;
   transition: transform 0.3s ease-in-out;
   transform: scaleX(0);
@@ -164,7 +175,7 @@ body {
   }
 }
 .hero h1 span {
-  color: var(--clr-primary);
+  color: var(--flame-orange);
 }
 .hero h2 {
   color: var(--clr-fg-alt);
@@ -176,7 +187,7 @@ body {
   content: "";
   width: 320px;
   bottom: -10px;
-  background-color: var(--clr-primary);
+  background-color: var(--flame-orange);
   height: 3px;
   position: relative;
   display: block;
@@ -224,7 +235,6 @@ body {
 }
 
 .projects {
-  background-color: var(--clr-bg-alt);
   padding-bottom: 25px;
 }
 .projects .project-card {
@@ -235,6 +245,11 @@ body {
   transition: 0.3s all ease;
   background-color: var(--clr-bg);
 }
+.projects .project-card p {
+  text-align: center;
+  margin: 0;
+}
+
 .projects .project-card ul li {
   font-weight: bold;
 }
@@ -307,9 +322,25 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
+/* Companies sect */
+.companies {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+  background-color: var(--light_blue);
+}
+.companies img {
+  padding: 10px;
+  width: 100%;
+  max-width: 160px;
+}
+/* */
 .skills {
   padding-bottom: 50px;
+  
 }
 .skills h2 {
   font-weight: 700;
@@ -437,7 +468,7 @@ body {
   border: none;
   background-color: white;
   border-radius: 4px;
-  color: var(--clr-primary);
+  color: var(--flame-orange);
   z-index: 1;
 }
 
@@ -455,6 +486,6 @@ footer p {
   }
 }
 footer p span {
-  color: var(--clr-primary);
+  color: var(--flame-orange);
   font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
