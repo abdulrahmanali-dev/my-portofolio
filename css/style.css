@@ -358,6 +358,12 @@ body {
   margin: 10px;
   transition: all 0.3s;
 }
+
+@media (max-width:992px) {
+  .skills .skills-box .skill {
+    width: 40%;
+  }
+}
 .skills .skills-box .skill:hover {
   transform: translateY(-10px);
 }
