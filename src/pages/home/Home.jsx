@@ -5,20 +5,20 @@ import "./Home.css";
 import { projects } from "../../assets/data/projects";
 import { skills } from "../../assets/data/skills";
 import { toast } from "react-toastify";
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 
 function Home() {
   const form = useRef();
   const handleContact = (e) => {
     e.preventDefault();
-    // emailjs.sendForm('service_vvsc6zn', 'template_2nish6g', form.current, 'EqCA2Js1g6Dl94zXh')
-    // .then((result) => {
-    // toast.success('Mes/sage Sent')
-    // e.target.reset()
-    // }, (error) => {
-    // toast.error('error')
-    // });
+    emailjs.sendForm('service_vvsc6zn', 'template_2nish6g', form.current, 'EqCA2Js1g6Dl94zXh')
+    .then((result) => {
+    toast.success('Message Sent')
+    e.target.reset()
+    }, (error) => {
+    toast.error('error')
+    });
   };
   return (
     <div className="home">
@@ -176,12 +176,13 @@ function Home() {
               className="col-12 col-md-6 col-lg-4 d-flex flex-column"
             >
               <label for="name">Full Name</label>
-              <input type="text" placeholder="Full Name" name="user_name" />
+              <input type="text" placeholder="Full Name" name="user_name" required/>
               <label for="email">Email</label>
-              <input type="email" placeholder="Email" name="user_email" />
+              <input type="email" placeholder="Email" name="user_email" required/>
               <label for="message">Message</label>
               <textarea
                 name="message"
+                required 
                 placeholder="I Would Like To Discuss Some Stuff"
                 id=""
                 cols="10"
