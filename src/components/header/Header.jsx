@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Header.scss";
+import "./Header.css";
 import {
   Collapse,
   Navbar,
@@ -13,7 +13,7 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText,
-} from 'reactstrap';
+} from "reactstrap";
 function Header() {
   const [active, setActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -77,20 +77,31 @@ function Header() {
     //   </div>
     // </nav>
     <div>
-           <Navbar container fixed="fixed" expand='lg' className={`p-4 ${active && 'sticky'}`}>
-        <NavbarBrand href="#" className="hover_line">ABDO.</NavbarBrand>
+      <Navbar
+        container
+        fixed="fixed"
+        expand="lg"
+        className={`p-4 ${active && "sticky"}`}
+      >
+        <NavbarBrand href="#" className="hover_line">
+          ABDO.
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ms-auto" navbar>
             <NavItem>
-              <NavLink className="hover_line" href="#skills">Skills</NavLink>
+              <NavLink className="hover_line" href="#skills">
+                Skills
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="hover_line" href="#projects">Projects</NavLink>
+              <NavLink className="hover_line" href="#projects">
+                Projects
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink className="hover_line" href="#contact">
-              Contact
+                Contact
               </NavLink>
             </NavItem>
           </Nav>

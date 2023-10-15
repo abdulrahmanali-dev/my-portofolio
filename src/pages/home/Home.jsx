@@ -1,24 +1,25 @@
 import React, { useRef } from "react";
-import "./Home.scss";
-import devzoniaLogo from "../../assets/images/devzonia_logo.svg";
-import ptLogo from "../../assets/images/pt_logo.webp";
+import "./Home.css";
+// import devzoniaLogo from "../../assets/images/devzonia_logo.svg";
+// import ptLogo from "../../assets/images/pt_logo.webp";
 import { projects } from "../../assets/data/projects";
 import { skills } from "../../assets/data/skills";
 import { toast } from "react-toastify";
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
+
 
 function Home() {
   const form = useRef();
-  const handleContact = (e)=> {
-    e.preventDefault()
-    emailjs.sendForm('service_vvsc6zn', 'template_2nish6g', form.current, 'EqCA2Js1g6Dl94zXh')
-    .then((result) => {
-        toast.success('Message Sent')
-        e.target.reset()
-      }, (error) => {
-      toast.error('error')
-    });
-  }
+  const handleContact = (e) => {
+    e.preventDefault();
+    // emailjs.sendForm('service_vvsc6zn', 'template_2nish6g', form.current, 'EqCA2Js1g6Dl94zXh')
+    // .then((result) => {
+    // toast.success('Mes/sage Sent')
+    // e.target.reset()
+    // }, (error) => {
+    // toast.error('error')
+    // });
+  };
   return (
     <div className="home">
       <section className="hero mt-5 d-flex justify-content-center align-items-center">
@@ -65,8 +66,8 @@ function Home() {
         Worked With <br />
       </h2>
       <section className="companies">
-        <img src={devzoniaLogo} alt="Devzonia Logo" />
-        <img src={ptLogo} alt="Property Turkey Logo" />
+        {/* <img src={devzoniaLogo} alt="Devzonia Logo" />
+        <img src={ptLogo} alt="Property Turkey Logo" /> */}
       </section>
       <div className="year">Years of Experiens: 1+</div>
       <section className="skills" id="skills">
@@ -169,20 +170,26 @@ function Home() {
                 </a>
               </div>
             </div>
-            <form ref={form} onSubmit={handleContact} className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+            <form
+              ref={form}
+              onSubmit={handleContact}
+              className="col-12 col-md-6 col-lg-4 d-flex flex-column"
+            >
               <label for="name">Full Name</label>
-              <input type="text" placeholder="Full Name" name="user_name"  />
+              <input type="text" placeholder="Full Name" name="user_name" />
               <label for="email">Email</label>
-              <input type="email" placeholder="Email" name="user_email"  />
-              <label for="message" >Message</label>
+              <input type="email" placeholder="Email" name="user_email" />
+              <label for="message">Message</label>
               <textarea
-              name="message"
+                name="message"
                 placeholder="I Would Like To Discuss Some Stuff"
                 id=""
                 cols="10"
                 rows="10"
               ></textarea>
-              <button type="submit" className="btn">Submit</button>
+              <button type="submit" className="btn">
+                Submit
+              </button>
             </form>
           </div>
         </div>
