@@ -10,6 +10,8 @@ import git from "../images/git.png";
 import github from "../images/github.png";
 import html from "../images/html.png";
 import js from "../images/js.png";
+import jquery from "../images/jquery.webp";
+import angularJs from "../images/AngularJS.webp";
 
 export const skills = [
   {
@@ -55,6 +57,14 @@ export const skills = [
   {
     name: "ES6",
     imgUrl: es6,
+  },
+  {
+    name: "jQuery",
+    imgUrl: jquery,
+  },
+  {
+    name: "AngularJs",
+    imgUrl: angularJs,
   },
 ];
 
