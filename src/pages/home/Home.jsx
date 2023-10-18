@@ -6,6 +6,7 @@ import { projects } from "../../assets/data/projects";
 import { skills } from "../../assets/data/skills";
 import { toast } from "react-toastify";
 import emailjs from '@emailjs/browser';
+import resume from "../../assets/files/Abdulrahman's Resume.pdf";
 
 
 function Home() {
@@ -52,7 +53,7 @@ function Home() {
               <span> Linkedin </span>
             </a>
             <a
-              href="../../Abdulrahman's Resume.pdf"
+              href={resume}
               target="_blank"
               className="btn-with-img btn"
             >
