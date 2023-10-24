@@ -12,6 +12,7 @@ import html from "../images/html.png";
 import js from "../images/js.png";
 import jquery from "../images/jquery.webp";
 import angularJs from "../images/AngularJS.webp";
+import shopify from "../images/shopify.png";
 
 export const skills = [
   {
@@ -65,6 +66,10 @@ export const skills = [
   {
     name: "AngularJs",
     imgUrl: angularJs,
+  },
+  {
+    name: "Shopify",
+    imgUrl: shopify,
   },
 ];
 
