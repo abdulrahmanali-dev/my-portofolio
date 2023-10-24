@@ -47,10 +47,10 @@ export const skills = [
     name: "Bootstrap",
     imgUrl: bootstrap,
   },
-  {
-    name: "PugJS",
-    imgUrl: pug,
-  },
+  // {
+  //   name: "PugJS",
+  //   imgUrl: pug,
+  // },
   {
     name: "Github",
     imgUrl: github,
