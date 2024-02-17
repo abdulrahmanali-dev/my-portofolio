@@ -13,6 +13,8 @@ import js from "../images/js.png";
 import jquery from "../images/jquery.webp";
 import angularJs from "../images/AngularJS.webp";
 import shopify from "../images/shopify.png";
+import wordpress from "../images/wordpress.svg";
+import webflow from "../images/webflow.png";
 
 export const skills = [
   {
@@ -70,6 +72,14 @@ export const skills = [
   {
     name: "Shopify",
     imgUrl: shopify,
+  },
+  {
+    name: "Wordpress",
+    imgUrl: wordpress,
+  },
+  {
+    name: "Webflow",
+    imgUrl: webflow,
   },
 ];
 

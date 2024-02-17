@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import "./Home.css";
 import devzoniaLogo from "../../assets/images/devzonia_logo.webp";
 import ptLogo from "../../assets/images/pt_logo.webp";
+import ghLogo from "../../assets/images/gh-logo.gif";
 import { projects } from "../../assets/data/projects";
 import { skills } from "../../assets/data/skills";
 import { toast } from "react-toastify";
@@ -69,6 +70,7 @@ function Home() {
       <section className="companies">
         <img src={devzoniaLogo} alt="Devzonia Logo" />
         <img src={ptLogo} alt="Property Turkey Logo" />
+        <img src={ghLogo} alt="Growth Hacker Logo" />
       </section>
       <div className="year">Years of Experiens: 1+</div>
       <section className="skills" id="skills">

@@ -2,6 +2,7 @@ import project2Img from "../images/project-2.webp";
 import project3Img from "../images/project-3.webp";
 import project5Img from "../images/project-5.webp";
 import project6Img from "../images/project-6.webp";
+import project7Img from "../images/project-7.webp";
 export const projects = [
   {
     name: "Printy Store",
@@ -20,11 +21,11 @@ export const projects = [
     source: "https://github.com/abdulrahmanali-dev/poll2know.com_frontend",
   },
   {
-    name: "Real Estate",
-    desc: "Real Estate Website",
+    name: "Clinique Hypnose Social",
+    desc: "A Landing Page for a Hypnose Clinic",
     tech: ["HTML", "JS", "CSS"],
-    imgUrl: project3Img,
-    link: "https://real-essstate.netlify.app",
-    source: "https://github.com/abdulrahmanali-dev/real-estate-website",
+    imgUrl: project7Img,
+    link: "https://clinique-hypnose.netlify.app",
+    source: "https://github.com/abdulrahmanali-dev/clinique-hypnose-social",
   },
 ];
