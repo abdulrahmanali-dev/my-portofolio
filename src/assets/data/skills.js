@@ -13,7 +13,7 @@ import js from "../images/js.png";
 import jquery from "../images/jquery.webp";
 import angularJs from "../images/AngularJS.webp";
 import shopify from "../images/shopify.png";
-import wordpress from "../images/wordpress.svg";
+import wordpress from "../images/wordpress.png";
 import webflow from "../images/webflow.png";
 
 export const skills = [
