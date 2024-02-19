@@ -19,13 +19,14 @@ export const projects = [
     imgUrl: project6Img,
     link: "https://poll2know.com/en/",
     source: "https://github.com/abdulrahmanali-dev/poll2know.com_frontend",
-  },
-  {
-    name: "Clinique Hypnose Social",
-    desc: "A Landing Page for a Hypnose Clinic",
-    tech: ["HTML", "JS", "CSS"],
-    imgUrl: project7Img,
-    link: "https://clinique-hypnose.netlify.app",
-    source: "https://github.com/abdulrahmanali-dev/clinique-hypnose-social",
-  },
+  }
+  // ,
+  // {
+  //   name: "Clinique Hypnose Social",
+  //   desc: "A Landing Page for a Hypnose Clinic",
+  //   tech: ["HTML", "JS", "CSS"],
+  //   imgUrl: project7Img,
+  //   link: "https://clinique-hypnose.netlify.app",
+  //   source: "https://github.com/abdulrahmanali-dev/clinique-hypnose-social",
+  // },
 ];
